@@ -11,6 +11,18 @@ jobs:
 
     steps:
       - name: Checkout Repository
+      - name: Check HTML Files
+        run: |
+          find . -name "*.html"
+          echo "HTML files found successfully."
+          - name: Check CSS Files
+        run: |
+          find . -name "*.css"
+          echo "CSS files found successfully."
+          - name: Check JavaScript Files
+        run: |
+          find . -name "*.js"
+          echo "JavaScript files found successfully."
         uses: actions/checkout@v4
 
       - name: CI/CD Pipeline Started
